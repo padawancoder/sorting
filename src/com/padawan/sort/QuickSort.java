@@ -6,7 +6,7 @@ import java.util.List;
 public class QuickSort implements Sort<Integer> {
 
     public void sort(Integer[] array) {
-        quickSort(array, 0, array.length);
+        quickSort(array, 0, array.length-1);
     }
 
     private void quickSort(Integer[] array, int low, int high){
@@ -14,7 +14,7 @@ public class QuickSort implements Sort<Integer> {
 
         if(low >= high) return;
 
-        int middle = (low + (high-low))/2;
+        int middle = low + (high-low)/2;
         Integer pivot = array[middle];
 
         int i = low, j = high;
@@ -44,5 +44,4 @@ public class QuickSort implements Sort<Integer> {
         }
 
     }
-
 }

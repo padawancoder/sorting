@@ -1,25 +1,23 @@
 package com.padawan.sort;
 
-import com.sun.xml.internal.bind.v2.model.annotation.Quick;
 import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.experimental.runners.Enclosed;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(Enclosed.class)
-class QuickSortTest {
+/**
+ * Created by padawan on 5/14/17.
+ */
+class MergeSortTest {
     @Ignore
     public abstract static class TestContextBase {
         @InjectMocks
-        QuickSort quicksSort;
+        MergeSort mergeSort;
 
         protected Integer[] result;
         protected Integer[] numbers;
@@ -46,7 +44,7 @@ class QuickSortTest {
         @Override
         protected Integer[] getResponse() throws Exception {
             //Execute
-            quicksSort.sort(numbers);
+            mergeSort.sort(numbers);
 
             return numbers;
         }
